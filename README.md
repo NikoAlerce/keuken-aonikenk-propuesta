@@ -29,6 +29,7 @@ Páginas oficiales de YouTube: reclamos de Content ID (6013276), faltas (2814000
 ### Verificación de esta versión
 
 - Navegador del app, servidor local: sin errores de consola; sin desborde horizontal a 1440, 1009, 976, 375 y 320 píxeles; 10 respuestas sin anclas rotas, 14 tarjetas de opción y 11 productos.
+- Encabezado en celular (ambas páginas, `nav.js` compartido): barra de 55 px en `soluciones/` y 59 px en la portada, con logo y botón «Menú» que despliega los enlaces en dos columnas y se cierra al elegir uno o con Escape; sin JavaScript los enlaces quedan visibles. A 1200 px el botón no aparece y el menú conserva su fila. La barra móvil de subtotal y las anclas se ajustaron a la nueva altura.
 - Cálculos: recomendaciones = $736.973; seis puntos de montaje = $764.959; pinzas R094 en lugar de puntos = $750.799; dos amplificadores = $284.242 por ese tema; envío de $10.000,50 se suma con centavos. Importes negativos o mal formados invalidan el total.
 - Escritorio y celular revisados visualmente: portada, mapa de temas, covers, tarjetas de opción, lista de compra, tabla resumen y barra móvil de subtotal.
 - Ninguna prueba en el salón ni validación física del montaje se presenta como realizada. El panel de operador sigue siendo una demostración.
