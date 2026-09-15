@@ -1,147 +1,188 @@
 const money = n => new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
 const products = [
- {
-  "id": "redragon",
-  "name": "Redragon Hitman GW800",
-  "role": "01 / CÁMARA PRINCIPAL",
-  "price": 73899,
-  "image": "redragon.webp",
-  "url": "https://www.mercadolibre.com.ar/redragon-camara-web-gw800-1080p-pc-usb-20-microfono-dual/p/MLA58967202#wid=MLA1133582999",
-  "note": "Mora informática · stock nacional. Full HD a 30 fps, enfoque fijo desde 50 cm y MJPEG según fabricante. Principal del plan de $200.000. Su campo óptico está documentado; necesita luz frontal suficiente. La calidad con las luces de Keuken debe probarse. El fabricante confirma soporte para trípode, pero no indica aquí la medida de rosca: comprobar que sea 1/4″-20 antes de pedir el montaje.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "gadnic",
-  "name": "Gadnic CAMWEB11",
-  "role": "02 / CÁMARA CERCANA",
-  "price": 22199,
-  "image": "gadnic.webp",
-  "url": "https://www.mercadolibre.com.ar/camara-web-gadnic-fhd-1080p-microfono-30-fps-multiple-sistema-operativo/p/MLA49194509#wid=MLA2079807526",
-  "note": "Bidcom · stock nacional. Publicada como 1080p a 30 fps. Candidata para detalle cercano. MONTAJE PENDIENTE: su ficha y manual no confirman rosca para trípode. No comprar junto con el kit roscado sin comprobar la base física; puede necesitar un adaptador rígido a medida o cambiar de cámara. Ese trabajo no está cotizado. Ángulo y conector exacto también por confirmar.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "usb10",
-  "name": "USB activo Ztecno · 10 m",
-  "role": "DOS CÁMARAS / DOS EXTENSIONES",
-  "price": 29999,
-  "image": "usb10.webp",
-  "url": "https://www.mercadolibre.com.ar/cable-extension-usb-negro--10-metros--largo-alargue-activo/up/MLAU4082707078#wid=MLA1831335769",
-  "note": "ZTECNO · stock nacional. Una extensión USB 2.0 activa de 10 m para cada cámara. Mayor margen para subidas y bajadas en una sala de 6 × 10 m. Dos puertos directos en la PC; probar ambas cámaras juntas. Admite alimentación auxiliar de 5 V, no incluida: si hace falta, se cotiza dentro de la reserva.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "c920",
-  "name": "Logitech C920 / C920s",
-  "role": "CÁMARA LOGITECH FULL HD",
-  "price": 169999,
-  "image": "c920.webp",
-  "url": "https://www.mercadolibre.com.ar/camara-web-logitech-c920-full-hd-30fps-color-negro/p/MLA18932026?pdp_filters=SHIPPING_ORIGIN%3A10215068#wid=MLA1403241233",
-  "note": "GAUSSONLINE · stock nacional. Full HD a 30 fps, lente de cristal y autofoco; 78° diagonales. Principal en el plan de $300.000 y cercana en el óptimo. Ajustar y fijar el foco si se observa búsqueda durante el show. La publicación mezcla C920 y C920s: confirmar la variante antes de pagar.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "brio",
-  "name": "Logitech Brio 4K",
-  "role": "PRINCIPAL / ÓPTIMO",
-  "price": 267199,
-  "image": "brio.webp",
-  "url": "https://www.mercadolibre.com.ar/camara-web-logitech-brio-4k-90fps-color-negro/p/MLA18932094#wid=MLA1493567831",
-  "note": "D DINATECH · stock nacional. Modelo Brio 4K / 960-001105, con autofoco y campos diagonales de 65°, 78° o 90°. La usaría a 1080p30 por las extensiones USB 2.0; 4K requiere USB 3.0 y otro cableado. Aporta flexibilidad de encuadre y HDR; no elimina columnas ni sustituye luz frontal.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "base",
-  "name": "Base de pared Genki",
-  "role": "MONTAJE / UNA BASE POR CÁMARA",
-  "price": 13993,
-  "image": "base.webp",
-  "url": "https://www.mercadolibre.com.ar/tornillo-14-macho-a-pared-metalico-fotografia-resistente/up/MLAU3366236571#wid=MLA1515557807",
-  "note": "CODISUR · WALLSC-M. Salida macho 1/4″-20 para enroscar la rótula. Es una base corta de fijación, no una abrazadera para troncos ni un brazo que esquive columnas. Atornillar sobre apoyo firme y plano, con anclajes adecuados al material. Punto exacto y tornillería pendientes del relevamiento.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "rotula",
-  "name": "Mini rótula Genki",
-  "role": "ENCUADRE / UNA RÓTULA POR CÁMARA",
-  "price": 7990,
-  "image": "rotula.webp",
-  "url": "https://www.mercadolibre.com.ar/mini-rotula-para-aro-de-luz-o-tripodes-con-rosca-universal-negro/p/MLA59187686#wid=MLA2424560676",
-  "note": "CODISUR · entrada hembra 1/4″ y salida macho 1/4″. Permite girar, inclinar y bloquear con perilla. La descripción declara 1,5 kg; no se usa el dato contradictorio de 2 kg. Confirmar inclinación útil y espacio del clip de la webcam en la posición real. Requiere cámara con rosca compatible; no resuelve por sí sola la Gadnic.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "canal",
-  "name": "Canaleta Kalop · 2 m",
-  "role": "ÓPTIMO / ORDEN DEL CABLEADO",
-  "price": 3477,
-  "image": "canal.webp",
-  "url": "https://www.mercadolibre.com.ar/cable-canal-20x10-autoadhesivo-kalop-plastico-tira-2mts/up/MLAU286868592",
-  "note": "LED MORON · tira 20 × 10 mm de 2 m. Cinco tiras: provisión de 10 m, no recorrido medido. Confirmar sección útil, fijación y despacho de piezas de 2 m por Andreani. Cualquier metraje adicional sale de la reserva.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- },
- {
-  "id": "umc202",
-  "name": "Behringer UMC202HD",
-  "role": "ÓPTIMO / AUDIO DE CONSOLA",
-  "price": 232891,
-  "image": "umc202.webp",
-  "url": "https://www.mercadolibre.com.ar/interfaz-audio-usb-behringer-u-phoria-umc202hd-color-negro/p/MLA24547439#wid=MLA1621043073",
-  "note": "MUSICALMONROEBELGRANO · stock nacional. Dos entradas de línea para recibir L/R de la consola y enviarlas por USB a OBS. Elegir cables según las salidas reales. Se incluye como previsión en el óptimo; se puede quitar si la consola ya entrega audio USB estéreo estable. No es una mejora necesaria en ese caso.",
-  "source": "Mercado Libre · consulta 14/09/2026 · envío a Lago Puelo por cotizar"
- }
+  {
+    "id": "redragon",
+    "name": "Redragon Hitman GW800",
+    "role": "01 / CÁMARA PRINCIPAL",
+    "price": 73899,
+    "image": "redragon.webp",
+    "url": "https://www.mercadolibre.com.ar/redragon-camara-web-gw800-1080p-pc-usb-20-microfono-dual/p/MLA58967202#wid=MLA1133582999",
+    "note": "Una toma general en Full HD, con enfoque fijo.",
+    "seller": "Mora Informática",
+    "technical": "1080p a 30 fps; campo de 72° diagonales. El fabricante indica soporte para trípode; falta confirmar rosca 1/4″-20. Requiere una prueba con la iluminación del salón."
+  },
+  {
+    "id": "gadnic",
+    "name": "Gadnic CAMWEB11",
+    "role": "02 / CÁMARA CERCANA",
+    "price": 22199,
+    "image": "gadnic.webp",
+    "url": "https://www.mercadolibre.com.ar/camara-web-gadnic-fhd-1080p-microfono-30-fps-multiple-sistema-operativo/p/MLA49194509#wid=MLA2079807526",
+    "note": "Una segunda mirada para acercarse al músico o al instrumento.",
+    "seller": "Bidcom",
+    "technical": "Publicada como 1080p a 30 fps. Su montaje roscado, conector y campo visual requieren confirmación. Un adaptador específico, si hace falta, se cotiza aparte."
+  },
+  {
+    "id": "usb10",
+    "name": "USB activo Ztecno · 10 m",
+    "role": "DOS CÁMARAS / DOS EXTENSIONES",
+    "price": 29999,
+    "image": "usb10.webp",
+    "url": "https://www.mercadolibre.com.ar/cable-extension-usb-negro--10-metros--largo-alargue-activo/up/MLAU4082707078#wid=MLA1831335769",
+    "note": "Conecta cada cámara con la computadora junto a la consola.",
+    "seller": "ZTECNO",
+    "technical": "USB 2.0 activo de 10 m. Probar las dos cámaras simultáneamente en puertos directos. Alimentación auxiliar de 5 V no incluida; recorrido definitivo por medir."
+  },
+  {
+    "id": "c920",
+    "name": "Logitech C920 / C920s",
+    "role": "CÁMARA LOGITECH FULL HD",
+    "price": 169999,
+    "image": "c920.webp",
+    "url": "https://www.mercadolibre.com.ar/camara-web-logitech-c920-full-hd-30fps-color-negro/p/MLA18932026?pdp_filters=SHIPPING_ORIGIN%3A10215068#wid=MLA1403241233",
+    "note": "Autofoco y lente de cristal para el plano principal o una toma cercana.",
+    "seller": "GAUSSONLINE",
+    "technical": "1080p a 30 fps; 78° diagonales; montaje 1/4″. Confirmar variante C920/C920s con el vendedor. Ajustar enfoque y exposición durante el ensayo."
+  },
+  {
+    "id": "brio",
+    "name": "Logitech Brio 4K",
+    "role": "PRINCIPAL / ÓPTIMO",
+    "price": 267199,
+    "image": "brio.webp",
+    "url": "https://www.mercadolibre.com.ar/camara-web-logitech-brio-4k-90fps-color-negro/p/MLA18932094#wid=MLA1493567831",
+    "note": "Más amplitud de encuadre y ajustes para la cámara principal.",
+    "seller": "D DINATECH",
+    "technical": "Brio 4K / 960-001105: autofoco, HDR y campo diagonal seleccionable de 65°, 78° o 90°. En esta instalación trabaja a 1080p30 por el cableado USB 2.0. La captura 4K requiere otro cableado."
+  },
+  {
+    "id": "base",
+    "name": "Base de pared Genki",
+    "role": "MONTAJE / UNA BASE POR CÁMARA",
+    "price": 13993,
+    "image": "base.webp",
+    "url": "https://www.mercadolibre.com.ar/tornillo-14-macho-a-pared-metalico-fotografia-resistente/up/MLAU3366236571#wid=MLA1515557807",
+    "note": "Fijación permanente para cada cámara.",
+    "seller": "CODISUR",
+    "technical": "Genki WALLSC-M, salida macho 1/4″-20. Requiere apoyo firme y plano. Anclajes, retención y cualquier brazo adicional se definen en la visita."
+  },
+  {
+    "id": "rotula",
+    "name": "Mini rótula Genki",
+    "role": "ENCUADRE / UNA RÓTULA POR CÁMARA",
+    "price": 7990,
+    "image": "rotula.webp",
+    "url": "https://www.mercadolibre.com.ar/mini-rotula-para-aro-de-luz-o-tripodes-con-rosca-universal-negro/p/MLA59187686#wid=MLA2424560676",
+    "note": "Permite orientar la cámara y mantener el encuadre.",
+    "seller": "CODISUR",
+    "technical": "Conexiones hembra y macho de 1/4″; carga declarada de 1,5 kg. Comprobar inclinación útil y espacio para la cámara en el punto de instalación."
+  },
+  {
+    "id": "canal",
+    "name": "Canaleta Kalop · 2 m",
+    "role": "ÓPTIMO / ORDEN DEL CABLEADO",
+    "price": 3477,
+    "image": "canal.webp",
+    "url": "https://www.mercadolibre.com.ar/cable-canal-20x10-autoadhesivo-kalop-plastico-tira-2mts/up/MLAU286868592",
+    "note": "Protege y ordena el recorrido de los cables.",
+    "seller": "LED MORON",
+    "technical": "Kalop 20 × 10 mm, tira de 2 m. Se contemplan cinco tiras: 10 m en total. Metraje, fijación y envío de las piezas se confirman en el relevamiento."
+  },
+  {
+    "id": "umc202",
+    "name": "Behringer UMC202HD",
+    "role": "ÓPTIMO / AUDIO DE CONSOLA",
+    "price": 232891,
+    "image": "umc202.webp",
+    "url": "https://www.mercadolibre.com.ar/interfaz-audio-usb-behringer-u-phoria-umc202hd-color-negro/p/MLA24547439#wid=MLA1621043073",
+    "note": "Lleva el sonido estéreo de la consola a la computadora.",
+    "seller": "MUSICAL MONROE BELGRANO",
+    "technical": "Behringer UMC202HD, dos entradas de línea. Los cables dependen de las salidas de la consola y se cotizan aparte. Puede omitirse si la consola ya envía audio USB estéreo compatible."
+  }
 ];
+
 const external = (url,label) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
 document.getElementById('content').innerHTML = `
-<section class="section installation"><p class="eyebrow">02 / EL SALÓN REAL CAMBIA EL ENCUADRE</p><div class="section-heading"><h2>Entre columnas,<br>hay que encontrar<br>la mirada.</h2><p>Las fotos muestran una tarima junto a la pared del televisor, columnas frente al área de actuación y vigas bajas. La posición de las cámaras se decide mirando al músico desde el público, no suponiendo un escenario al fondo del salón.</p></div>
-<div class="installation-grid"><figure class="room"><div class="photo-annotated"><img src="assets/salon-publico.webp" alt="Vista real desde las mesas hacia la tarima. Una columna se interpone frente al televisor y al espacio de los músicos." width="1360" height="644"><span class="photo-pin a" aria-hidden="true">A</span><span class="photo-pin b" aria-hidden="true">B</span><span class="photo-pin c" aria-hidden="true">C</span></div><figcaption>Foto aportada · vista desde el público. Las marcas señalan obstáculos y áreas visibles; no son puntos de montaje ya aprobados.</figcaption></figure><div class="placement-notes"><article><span class="number">A</span><div><h3>La columna corta el plano</h3><p>Desde una posición centrada puede tapar a un músico. Probar la cámara principal a un lado de su eje, frente al sector donde se toca. Subirla no elimina necesariamente la obstrucción.</p></div></article><article><span class="number">B</span><div><h3>Una tarima sobre el lateral</h3><p>El ancho útil depende de dónde se ubique la banda. Una cámara puede resolver un solista o dúo; una banda distribuida entre columnas puede necesitar los dos ángulos.</p></div></article><article><span class="number">C</span><div><h3>Techo bajo y luces cerca</h3><p>Colocar apenas por encima del público, con inclinación moderada. Evitar vigas dentro del cuadro, focos de frente y una vista demasiado cenital.</p></div></article></div></div>
-<div class="real-gallery"><figure><img src="assets/salon-dia.webp" alt="Salón de día con tarima lateral de madera, columnas, ventanas y tambores sobre sillas" loading="lazy" width="1360" height="765"><figcaption><strong>De día: circulación y contraluz.</strong>La sala tiene ventanas y pasos entre columnas. Conservar puertas y circulación libres. Llevar cables por el perímetro; medir su recorrido hasta la PC. Las fotos no permiten fijar esos metros.</figcaption></figure><figure><img src="assets/salon-show.webp" alt="Músico en la tarima bajo iluminación azul y violeta, con micrófonos y vigas bajas" loading="lazy" width="765" height="1020"><figcaption><strong>Durante el show: probar pieles y luces.</strong>Los tonos azules y violetas pueden dominar la imagen. Ensayar con un músico: si la cara queda oscura, ajustar primero la iluminación existente. La cámara elegida también necesita luz frontal suficiente: reutilizar y orientar las luces existentes antes de añadir equipos.</figcaption></figure></div>
-<div class="verdict"><h3>Conclusión: dos encuadres complementarios para este salón.</h3><p>Mantenemos OBS, audio de consola, cámaras fijas y copia local. El croquis aportado permite proponer una cámara frente al escenario y otra lateral, mirando entre columnas. Los dos encuadres deben probarse antes de fijar los soportes. El segundo ángulo puede ser necesario para cubrir a toda la banda, no solo para variar el video. Los tres presupuestos incorporan las dos cámaras desde el inicio. No se promete cubrir una banda completa si las columnas ocultan parte del escenario.</p></div></section>
-<section class="section equipment" id="equipo"><p class="eyebrow">03 / TRES PRESUPUESTOS · SIEMPRE DOS CÁMARAS</p><div class="section-heading"><h2>Elegir cuánto<br>invertir.</h2><p>Las tres opciones mantienen una toma principal, otra cercana y operación desde la consola. Compras nacionales, precios consultados el <strong>14/09/2026</strong>. Los $200.000 y $300.000 son objetivos de gasto total. Al corregir los soportes, la primera selección supera su tope y la segunda deja muy poco margen. El óptimo usa una previsión orientativa.</p></div>
-<div class="tier-picker" id="tier-picker" role="group" aria-label="Elegir presupuesto de dos cámaras"></div>
-<div class="tier-recommendation"><strong>La corrección del soporte cambia la decisión de compra.</strong><p>Las dos primeras opciones necesitan resolver el anclaje de la Gadnic y cerrar todos los gastos. El óptimo tiene roscas de cámara documentadas, pero también exige probar los puntos de montaje. La rótula orienta: no desplaza la cámara para esquivar una columna. <a href="#montaje">Ver cómo debe montarse ↓</a></p></div>
-<div class="budget-layout"><div><p id="mode-note" class="mode-note"></p><div class="product-grid" id="products"></div></div><aside class="budget-summary" aria-label="Presupuesto seleccionado"><p class="eyebrow">DOS CÁMARAS / PESOS ARGENTINOS</p><div id="budget-output" aria-live="polite"></div><div id="interface-option" hidden><label class="audio-option"><input id="console-usb" type="checkbox"> La consola ya entrega audio USB estéreo verificado</label><p class="small">Quita la UMC202HD del óptimo. Las dos cámaras siguen incluidas. No marcar solo porque la consola tenga un puerto para pendrive.</p></div><div class="closing-costs"><h3>Cerrar los gastos pendientes</h3><p class="small">Cada opción conserva sus propios importes. Los campos vacíos siguen pendientes; no significan envío o instalación gratis.</p><div class="cost-entry"><label for="fixings">Anclajes, adaptación de cámara y cableado</label><div><span>ARS</span><input id="fixings" type="number" min="0" max="10000000" step="0.01" placeholder="Sin cotizar"></div></div><div class="cost-entry"><label for="audio-cost">Audio y cables que falten</label><div><span>ARS</span><input id="audio-cost" type="number" min="0" max="10000000" step="0.01" placeholder="Sin cotizar"></div></div><div class="cost-entry"><label for="delivery">Andreani, luz y demás gastos</label><div><span>ARS</span><input id="delivery" type="number" min="0" max="10000000" step="0.01" placeholder="Sin cotizar"></div></div></div><p class="small">La reserva debe cubrir todo gasto no listado: envíos, anclajes, fuentes USB, cables, ajustes de luz y trabajo si se cobra. Se reutilizan PC, consola, internet y luces del salón. Los $200.000 y $300.000 solo se cumplen si el cierre real entra en el margen mostrado.</p><a href="#pendientes" class="text-link">Qué confirmar antes de comprar ↓</a></aside></div>
-<div class="budget-footnote"><strong>Cómo comparar sin mezclar cuentas.</strong><p>“Productos” suma únicamente las cantidades visibles. “Disponible para cerrar” es lo que resta del tope o previsión; no es una cotización ni ahorro confirmado. La interfaz solo se incluye en el óptimo. En los otros dos planes, una interfaz nueva, si hace falta, debe caber en la reserva o habrá que revisar la selección.</p><p>El óptimo propone una previsión de $900.000 con interfaz, o $650.000 si ya hay USB de audio validado. Son referencias de planificación, no límites indicados por el usuario ni precios finales de instalación. Mercado Envíos no garantiza poder elegir Andreani: confirmar despacho nacional a domicilio en Lago Puelo, costo y plazo con cada vendedor.</p></div></section>
-<section class="section audio-section"><p class="eyebrow">04 / EL SONIDO IMPORTA TANTO COMO LA IMAGEN</p><div class="section-heading"><h2>Primero, mirar<br>la consola.</h2><p>La interfaz de audio no se compra a ciegas. La conexión depende de qué salidas tenga la consola y qué entradas tenga la computadora.</p></div><div class="audio-paths"><article><span class="path-label">A / SI TIENE USB DE AUDIO</span><h3>Consola → USB → PC</h3><p>Confirmar que el USB envía audio a la computadora: algunos puertos solo reproducen pendrives. Elegir la entrada de la consola en OBS y probarla.</p><strong>Interfaz adicional: posiblemente $0.</strong></article><article><span class="path-label">B / SI LA PC TIENE LINE IN REAL</span><h3>Salida de línea → PC</h3><p>Un cable RCA a 3,5 mm sirve únicamente con salida RCA estéreo y entrada Line In compatible. La entrada de micrófono de una notebook no equivale a Line In.</p><strong>Cotizar el cable correcto dentro de la reserva.</strong></article><article><span class="path-label">C / SI NO SE CUMPLE LO ANTERIOR</span><h3>Consola → interfaz → PC</h3><p>Hace falta una interfaz con entrada de línea real y sus cables. Una placa USB barata con entrada de micrófono no la reemplaza. El óptimo contempla una UMC202HD. En las opciones de $200.000 y $300.000, una interfaz nueva puede superar el margen: cerrar este punto antes de pagar las cámaras.</p><strong>En el óptimo: UMC202HD incluida, salvo USB ya validado.</strong></article></div><p class="audio-tip">Para la UMC202HD: conectar la salida de línea de consola a sus entradas en modo LINE, ajustar ganancia y escuchar la grabación. No copiar los datos erróneos de MIDI o “0 ms” de la publicación; la ficha oficial es la referencia. En una sala pequeña, la mezcla que alimenta los parlantes puede tener poca batería o guitarra porque ya suenan fuerte en el lugar. Escuchar una grabación de prueba. Un AUX puede dar una mezcla separada, pero un AUX habitual es mono: estéreo requiere dos buses adecuados o una salida estéreo.</p><p class="small">${external('https://www.behringer.com/en/products/0805-AAR','Especificaciones oficiales UMC202HD')}</p></section>
-<section class="section" id="plan"><p class="eyebrow">05 / PLAN DE ACCIÓN</p><div class="section-heading"><h2>Del primer cable<br>al primer recital.</h2><p>La instalación se da por terminada cuando otra persona puede usarla siguiendo la guía y se comprueba que el vivo y el archivo funcionan.</p></div><div class="steps"><article><span>01</span><h3>Relevar</h3><p>Identificar consola y PC, medir recorridos, mirar iluminación y probar la subida de internet por Ethernet.</p><small>Resultado: lista compatible y costo final.</small></article><article><span>02</span><h3>Probar y montar</h3><p>Probar ambas cámaras con sus extensiones de 10 m. Adaptar las bases, asegurar las cámaras y guiar USB con fijaciones adecuadas por pared o techo, sin tironear conectores ni cruzar pasos.</p><small>Resultado: imagen estable con las luces del show.</small></article><article><span>03</span><h3>Dejar OBS listo</h3><p>Preparar GENERAL, LATERAL y ESPERA. Silenciar micrófonos de webcams y sonido del escritorio. Ajustar sincronización con una palmada.</p><small>Resultado: un perfil guardado y una copia de respaldo.</small></article><article><span>04</span><h3>Ensayar el recital</h3><p>Hacer un vivo no listado con audio real durante 60 minutos. Comprobar cortes, sincronía y reproducción del archivo.</p><small>Resultado: validación en la PC y canal reales.</small></article></div>
-<details class="technical"><summary>Ajustes de partida para quien configure OBS <span>+</span></summary><div class="technical-grid"><p><strong>Imagen</strong><br>Salida 1920 × 1080, 30 fps, H.264. En las fuentes USB, elegir MJPEG si cada cámara lo admite para reducir tráfico; evitar YUY2 sin comprimir a 1080p30. Si dos fuentes fallan, probar controladores USB separados o la secundaria a 720p. Probar exposición y balance de blancos con las luces de escena; fijarlos si el controlador lo permite. No hay garantía de buen resultado en oscuridad.</p><p><strong>Transmisión</strong><br>La guía actual de YouTube indica 10 Mb/s para H.264 a 1080p30, CBR y fotogramas clave cada 2 s. Proponemos al menos 15 Mb/s de subida estable para dar margen. Si falla, probar 720p30 a 4 Mb/s.</p><p><strong>Grabación local</strong><br>MKV, misma codificación que el vivo para reducir carga. Luego convertir a MP4 con la función de OBS. A 10 Mb/s, reservar unos 5 GB por hora; conservar MKV y MP4 duplica el espacio aproximado.</p><p><strong>Archivo en YouTube</strong><br>Los vivos de menos de 12 horas pueden archivarse automáticamente. Verificar que aparezca y se reproduzca al finalizar. La copia local sigue siendo necesaria.</p></div><p class="small">Fuentes: ${external('https://support.google.com/youtube/answer/2853702?hl=es','Ajustes de YouTube')} · ${external('https://obsproject.com/kb/standard-recording-output-guide','Grabación en OBS')} · ${external('https://support.google.com/youtube/answer/6247592?hl=es','Archivo de transmisiones')}</p></details></section>
-<section class="section nightly"><div><p class="eyebrow">06 / LA HOJA JUNTO A LA COMPUTADORA</p><h2>Esta noche<br>toca <em>grabar.</em></h2><p>Rutina prevista para el panel, una vez conectado a OBS. Un acceso directo abre la operación del recital; el inicio del vivo queda después de comprobar imagen y audio.</p><p class="small">La grabación puede acompañar al vivo si se deja configurada. Verificar siempre los indicadores de ambas acciones.</p></div><ol><li><span>01</span><div><strong>Encender y abrir el panel.</strong><p>Revisar espacio libre y conexión por cable.</p></div></li><li><span>02</span><div><strong>Ver imagen. Escuchar audio.</strong><p>Confirmar la banda completa, medidores sin rojo y una breve grabación de prueba; ninguna columna debe tapar al músico.</p></div></li><li><span>03</span><div><strong>Elegir el recital e iniciar.</strong><p>Revisar título y privacidad. Iniciar transmisión y grabación; confirmar ambas activas y el vivo en YouTube.</p></div></li><li><span>04</span><div><strong>Finalizar y comprobar.</strong><p>Detener transmisión y grabación. Confirmar cierre en YouTube y abrir la copia local antes de apagar.</p></div></li></ol></section>
-<section class="section pending" id="pendientes"><p class="eyebrow">07 / ANTES DE COMPRAR</p><div class="section-heading"><h2>Cuatro datos.<br>Y cerramos el plan.</h2><p>La propuesta está investigada. La instalación todavía necesita estas comprobaciones en el lugar.</p></div><div class="pending-grid"><article><h3>Consola y computadora</h3><p>Modelo y fotos de conexiones. Sistema operativo, USB disponibles, procesador, memoria y espacio de disco.</p></article><article><h3>Recorridos y luz</h3><p>Medir por pared/techo. Probar encuadres entre columnas con público y luces. Validar roscas, inclinación, anclajes y retención de las webcams; no perforar vigas de madera sin evaluar el soporte. Si la luz frontal no alcanza, cotizar su mejora dentro del tope.</p></article><article><h3>Canal e internet</h3><p>Acceso al canal del centro y prueba de subida en horario de recital. Habilitar el canal con anticipación: la primera activación puede tardar hasta 24 h; comprobar requisitos y restricciones de la cuenta.</p></article><article><h3>Compra final</h3><p>Reconfirmar precios, modelos y stock. Entrega solicitada: Andreani a domicilio en Lago Puelo. Confirmar con cada vendedor que pueda despachar por ese servicio y cotizar con el código postal y domicilio del centro. Elegir únicamente envío nacional.</p></article></div><p class="small">Coordinar con las bandas el registro y la transmisión, y revisar la música de terceros: YouTube puede interrumpir un vivo por derechos. ${external('https://artists.youtube/intl/en-GB/resources/going-live/','Guía de YouTube para músicos')} · ${external('https://support.google.com/youtube/answer/3367684?hl=es','Derechos en transmisiones')}</p></section>
-<section class="sources section"><p class="eyebrow">FUENTES Y ALCANCE</p><p>Las fotos de productos pertenecen a las publicaciones enlazadas. Logo, flyer y fotografías del salón fueron aportados por el usuario; el flyer no anuncia aquí un próximo evento. Los precios se revisaron en navegador sin sesión, con ubicación predeterminada de Mercado Libre en CABA: no se trasladan al presupuesto sus promesas de envío gratuito o entrega. El destino indicado por el usuario es domicilio en Lago Puelo por Andreani; todavía no hay cotización ni aceptación del transportista por todos los vendedores.</p><p>Las publicaciones de catálogo pueden cambiar de vendedor. Las configuraciones comparadas son Hitman + Gadnic; C920 + Gadnic; y Brio 4K + C920. Todas cotizan base Genki y rótula por cámara. El GL-105 fue retirado porque no resolvía fijación y orientación. El montaje de Gadnic sigue pendiente; el audio dedicado es condicional en el óptimo. Todas incluyen dos USB activos de 10 m, para 1080p30. La Brio se cotiza a $267.199 de D DINATECH y la C920 a $169.999 de GAUSSONLINE, con stock nacional observado. Se conserva la distinción entre especificaciones oficiales y datos contradictorios de las publicaciones. El audio, la calidad en sala y la estabilidad de dos cámaras simultáneas siguen sin probarse.</p><div>${external('https://www.instagram.com/keukenaonikenk/','Instagram del centro')} ${external('https://www.youtube.com/channel/UCTXaSLfvCtCCcbMyMckh44A','YouTube del centro')} ${external('https://mapainteractivocultural.ar/places/detail/61c289d2-42bb-48f6-b714-f5334037eb26','Registro cultural de Lago Puelo')} ${external('https://www.redragon.com.br/hitman','Ficha oficial Hitman')} ${external('https://www.logitech.com/es-es/shop/p/c920-pro-hd-webcam','Ficha oficial C920')} ${external('https://hub.sync.logitech.com/brio','Ficha oficial Brio')} ${external('https://www.gadnic.com.ar/camaras-web/camara-web-gadnic-webcam-full-hd-1080p-con-microfono-30-fps','Ficha oficial Gadnic')}</div><p class="small">Instagram no permitió la lectura automatizada de su contenido. La identidad se tomó de las imágenes aportadas; la ubicación y el canal se contrastaron con fuentes públicas. Esta página es una propuesta, no una tienda ni una transmisión en curso.</p></section>`;
-
+<section class="section installation" id="salon">
+  <p class="eyebrow">02 / PENSADO PARA KEUKEN</p>
+  <div class="section-heading"><h2>La cercanía del salón.<br>También en pantalla.</h2><p>Una cámara frente al escenario y otra cerca del músico. Dos miradas que se complementan y conservan el carácter de los recitales de Keuken.</p></div>
+  <div class="venue-story"><figure class="room"><img src="assets/salon-publico.webp" alt="El escenario de Keuken visto desde las mesas del público" width="1360" height="644"><figcaption>El escenario, visto desde el público.</figcaption></figure><div class="venue-caption"><p><strong>Un espacio de 6 × 10 m.</strong> Las columnas centrales guían la ubicación de las cámaras. Buscamos los ángulos entre ellas, con soportes fijos y el cableado fuera de los pasos.</p><p><strong>La luz del recital.</strong> Ajustaremos la imagen con la iluminación habitual del salón para cuidar las caras, los instrumentos y el ambiente.</p></div></div>
+  <div id="venue-plan"></div>
+  <details class="technical venue-gallery"><summary>Ver más fotos del salón <span>+</span></summary><div class="real-gallery"><figure><img src="assets/salon-dia.webp" alt="Salón de día: ventanas, columnas y tarima" loading="lazy" width="1360" height="765"><figcaption>Distribución, luz natural y circulación.</figcaption></figure><figure><img src="assets/salon-show.webp" alt="Músico en el escenario bajo las luces del recital" loading="lazy" width="765" height="1020"><figcaption>La iluminación y la cercanía de un show.</figcaption></figure></div></details>
+</section>
+<section class="section equipment" id="equipo">
+  <p class="eyebrow">04 / LA INVERSIÓN</p>
+  <div class="section-heading"><h2>Tres formas<br>de empezar.</h2><p>Todas incluyen dos cámaras, extensiones y soportes orientables. La diferencia está en la calidad de imagen y en la captura de sonido.</p></div>
+  <p class="quote-date">Precios de referencia al 14/09/2026 · Pesos argentinos · Publicaciones con stock nacional al consultar.</p>
+  <div class="tier-picker" id="tier-picker" role="group" aria-label="Comparar propuestas de equipamiento"></div>
+  <p class="quote-scope"><strong>Alcance del presupuesto:</strong> equipamiento. La instalación, los envíos y el desarrollo del panel se cotizan por separado. Se prevé utilizar la computadora, la consola, internet y las luces del salón, sujetos a una prueba de funcionamiento.</p>
+  <div class="budget-layout">
+    <div class="choice-details"><p class="eyebrow">LA OPCIÓN SELECCIONADA</p><div id="mode-note"></div><div id="selection-lines" class="selection-lines"></div><div class="selection-condition" id="selection-condition"></div><div id="interface-option" hidden><label class="audio-option"><input id="console-usb" type="checkbox"> La consola ya envía audio USB estéreo compatible</label><p class="small">En ese caso, se puede quitar la interfaz Behringer del presupuesto.</p></div><a href="#lista-compra" class="text-link">Ver productos, fotos y enlaces de compra ↓</a></div>
+    <aside class="budget-summary" aria-label="Presupuesto seleccionado"><p class="eyebrow">INVERSIÓN EN EQUIPAMIENTO</p><div id="budget-output" aria-live="polite"></div><details class="cost-planning"><summary>Sumar instalación y otros gastos <span>+</span></summary><p class="small">Completá los importes cuando tengas las cotizaciones.</p><div class="cost-entry"><label for="fixings">Instalación, anclajes y adaptaciones</label><div><span>ARS</span><input id="fixings" type="number" min="0" max="10000000" step="0.01" placeholder="A cotizar"></div></div><div class="cost-entry"><label for="audio-cost">Audio y cables adicionales</label><div><span>ARS</span><input id="audio-cost" type="number" min="0" max="10000000" step="0.01" placeholder="A cotizar"></div></div><div class="cost-entry"><label for="delivery">Envíos, panel y otros servicios</label><div><span>ARS</span><input id="delivery" type="number" min="0" max="10000000" step="0.01" placeholder="A cotizar"></div></div></details></aside>
+  </div>
+  <details class="technical shopping-list" id="lista-compra"><summary>Productos y enlaces de compra <span>+</span></summary><p class="small">Precios por unidad y cantidades para la opción seleccionada. Confirmar precio, modelo y disponibilidad con cada vendedor.</p><div class="product-grid" id="products"></div></details>
+  <p class="delivery-note">Entrega prevista a domicilio en Lago Puelo. El despacho por Andreani, su costo y plazo se acuerdan con cada vendedor antes de comprar.</p>
+</section>
+<section class="section launch-section" id="plan">
+  <p class="eyebrow">05 / PUESTA EN MARCHA</p>
+  <div class="section-heading"><h2>El próximo paso:<br>un ensayo en Keuken.</h2><p>Una visita al salón permite probar las tomas, revisar el sonido y cerrar el presupuesto de la instalación. Después, preparamos todo para el primer vivo.</p></div>
+  <div class="steps"><article><span>01</span><h3>Definir la instalación</h3><p>Probar los dos encuadres, las conexiones de la consola, la computadora y la subida de internet. Con eso se elige el equipo y se confirma el costo completo.</p></article><article><span>02</span><h3>Preparar y ensayar</h3><p>Fijar las cámaras, ordenar los cables y configurar imagen, sonido y grabación. Hacer un ensayo completo con las luces del recital.</p></article><article><span>03</span><h3>Compartir el primer vivo</h3><p>Preparar el evento en el canal, acompañar al operador y revisar la grabación al terminar. La rutina queda lista para los próximos encuentros.</p></article></div>
+  <div class="closing-invitation"><strong>Que cada recital llegue más lejos.</strong><p>Una instalación estable, un equipo que conoce su operación y un archivo que crece con la historia de Keuken.</p><a class="button" href="#equipo">Volver a comparar las opciones <span>↑</span></a></div>
+  <details class="technical" id="pendientes"><summary>Qué se define en la visita <span>+</span></summary><div class="technical-grid"><p><strong>Imagen e instalación.</strong> Posición de columnas, distancia a los músicos, altura de cámaras, apoyo de los soportes y recorrido completo del cableado. Comprobación de roscas y fijaciones antes de comprar.</p><p><strong>Sonido y computadora.</strong> Modelo y salidas de la consola, entradas disponibles, rendimiento de la PC y espacio para grabar. La prueba determina si hace falta una interfaz y qué cables usar.</p><p><strong>Canal y conexión.</strong> Acceso al canal de Keuken y prueba de subida de internet en horario de recital. Confirmación de que las emisiones en vivo están habilitadas.</p><p><strong>Presupuesto y programación.</strong> Confirmación de precios, entregas, instalación y alcance del panel. Coordinación con los artistas para el registro y la transmisión de su presentación.</p></div></details>
+  <details class="technical" id="ficha-tecnica"><summary>Ficha técnica y fuentes <span>+</span></summary><div class="technical-grid"><p><strong>Imagen.</strong> Propuesta en Full HD a 30 cuadros por segundo. Las dos cámaras se prueban a la vez con extensiones USB activas de 10 m. La Brio se utiliza a 1080p con este cableado; para 4K hay que cambiar la conexión.</p><p><strong>Audio.</strong> La consola puede enviar sonido por USB o por una salida de línea a una entrada compatible. Si hace falta una interfaz, la UMC202HD recibe los dos canales de la mezcla. Escucharemos una grabación para ajustar el sonido del vivo.</p><p><strong>Internet.</strong> Referencia para H.264 a 1080p30: 10 Mb/s de transmisión y al menos 15 Mb/s de subida estable como margen de trabajo. La prueba en el lugar define la calidad viable.</p><p><strong>Grabación.</strong> OBS permite guardar una copia local mientras transmite. A 10 Mb/s se prevén unos 5 GB por hora; guardar además una copia en otro formato requiere espacio adicional.</p></div><div class="source-links">${external('https://support.google.com/youtube/answer/2853702?hl=es','Requisitos de transmisión · YouTube')}${external('https://obsproject.com/kb/standard-recording-output-guide','Grabación · OBS')}${external('https://www.behringer.com/en/products/0805-AAR','Audio · Behringer')}${external('https://support.google.com/youtube/answer/3367684?hl=es','Derechos en transmisiones · YouTube')}</div></details>
+</section>`;
 
 const productById=Object.fromEntries(products.map(p=>[p.id,p]));
 const plans={
- economy:{title:'Objetivo $200.000',name:'Hitman + Gadnic',main:'redragon',secondary:'gadnic',cap:200000,tag:'01 / ESENCIAL',lines:[['redragon',1],['gadnic',1],['usb10',2],['base',2],['rotula',2]],note:'Hitman frontal y Gadnic cerca, con dos bases y dos rótulas previstas. Ya supera el tope por $62 solo en productos; faltan anclajes, envío y el montaje específico de Gadnic. Esta selección debe revisarse para cumplir $200.000: no está lista para comprar.'},
- balanced:{title:'Objetivo $300.000',name:'C920 + Gadnic',main:'c920',secondary:'gadnic',cap:300000,tag:'02 / PRINCIPAL MEJORADA',lines:[['c920',1],['gadnic',1],['usb10',2],['base',2],['rotula',2]],note:'C920 principal y Gadnic para detalles, con dos bases y dos rótulas previstas. Quedan solo $3.838 antes de envío, anclajes y resolver el montaje de Gadnic. Es una comparación de equipos; aún no es una instalación cerrada dentro de $300.000.'},
- optimal:{title:'Óptimo',name:'Brio 4K + C920',main:'brio',secondary:'c920',cap:900000,tag:'03 / AMBAS CÁMARAS + AUDIO',lines:[['brio',1],['c920',1],['usb10',2],['base',2],['rotula',2],['canal',5],['umc202',1]],note:'Principal Brio con encuadre ajustable, C920 cercana, bases con rótulas, 10 m de canaleta previstos y una interfaz de audio con dos entradas de línea. Pensado para uso permanente a 1080p30. La renovación completa de iluminación y la PC no están cotizadas: cualquier necesidad se agrega antes de cerrar.'}
+ economy:{title:'Esencial',name:'Hitman + Gadnic',main:'redragon',secondary:'gadnic',cap:200000,tag:'01 / PRIMERA ETAPA',benefit:'Una toma general y otra de detalle con la menor inversión en cámaras.',lines:[['redragon',1],['gadnic',1],['usb10',2],['base',2],['rotula',2]],note:'Para empezar con dos ángulos y aprovechar el sonido de la consola. La Hitman toma el escenario; la Gadnic se acerca al músico.',condition:'La selección supera en $62 el objetivo de $200.000 antes de instalación y envío. Para respetar ese límite hay que revisar la compra. También falta confirmar la fijación de ambas cámaras y la conexión de audio.'},
+ balanced:{title:'Mejor imagen',name:'C920 + Gadnic',main:'c920',secondary:'gadnic',cap:300000,tag:'02 / CÁMARA PRINCIPAL LOGITECH',benefit:'Una C920 con autofoco y lente de cristal para la toma que más se utiliza.',lines:[['c920',1],['gadnic',1],['usb10',2],['base',2],['rotula',2]],note:'La inversión se concentra en la cámara principal. La C920 aporta autofoco y la Gadnic conserva el segundo ángulo para detalles.',condition:'Quedan $3.838 del objetivo de $300.000 para los gastos restantes. La fijación de la Gadnic y la conexión de audio deben resolverse antes de cerrar la compra.'},
+ optimal:{title:'Óptimo',name:'Brio 4K + C920',main:'brio',secondary:'c920',cap:null,tag:'03 / DOS CÁMARAS LOGITECH',benefit:'Mayor amplitud de encuadre, dos cámaras con autofoco y audio dedicado.',lines:[['brio',1],['c920',1],['usb10',2],['base',2],['rotula',2],['canal',5],['umc202',1]],note:'Brio como cámara principal y C920 para acercamientos. Suma canaletas e interfaz de audio estéreo. Ambas cámaras tienen conexión de trípode de 1/4″.',condition:'La interfaz se puede omitir si la consola ya envía audio USB estéreo compatible. Instalación, cables de audio y servicios se cotizan después de la visita.'}
 };
 let mode='balanced';
 const fields=['fixings','audio-cost','delivery'];
 const entered=Object.fromEntries(Object.keys(plans).map(key=>[key,Object.fromEntries(fields.map(id=>[id,'']))]));
 let consoleUsb=false;
 function planLines(key){return plans[key].lines.filter(([id])=>!(key==='optimal'&&consoleUsb&&id==='umc202')).map(([id,qty])=>({...productById[id],qty,cents:Math.round(productById[id].price*100)}));}
-function planCap(key){return (key==='optimal'&&consoleUsb?650000:plans[key].cap)*100;}
 function subtotalOf(lines){return lines.reduce((sum,p)=>sum+p.cents*p.qty,0);}
 function renderPicker(){
- document.getElementById('tier-picker').innerHTML=Object.entries(plans).map(([key,p])=>{const cost=subtotalOf(planLines(key)),cap=planCap(key);return `<button id="tier-${key}" data-mode="${key}" aria-pressed="${mode===key}" aria-controls="products budget-output" class="tier-card ${mode===key?'active':''}"><span class="tier-tag">${p.tag}</span><strong class="tier-title">${p.title}</strong><span class="tier-photos"><img src="assets/${productById[p.main].image}" alt="${productById[p.main].name}"><span>+</span><img src="assets/${productById[p.secondary].image}" alt="${productById[p.secondary].name}"></span><strong class="tier-pair">${p.name}</strong><span class="tier-price">${money(cost/100)} <small>en productos</small></span><span class="tier-margin ${cost>cap?'tier-over':''}">${cost>cap?'Excede el tope en '+money((cost-cap)/100):money((cap-cost)/100)+' para cierre'}</span><span class="tier-cap">${key==='optimal'?'Previsión orientativa: '+money(cap/100):'Tope total: '+money(cap/100)}</span><span class="tier-action">${mode===key?'Viendo este presupuesto':'Ver lista y detalle →'}</span></button>`}).join('');
+ document.getElementById('tier-picker').innerHTML=Object.entries(plans).map(([key,p])=>{
+  const cost=subtotalOf(planLines(key)),gap=p.cap===null?null:p.cap*100-cost;
+  const benefit=key==='optimal'&&consoleUsb?'Mayor amplitud de encuadre y dos cámaras con autofoco, con audio USB de la consola.':p.benefit;
+  return `<button id="tier-${key}" data-mode="${key}" aria-pressed="${mode===key}" aria-controls="selection-lines budget-output products" class="tier-card ${mode===key?'active':''}"><span class="tier-tag">${p.tag}</span><strong class="tier-title">${p.title}</strong><span class="tier-photos"><img src="assets/${productById[p.main].image}" alt="${productById[p.main].name}"><span>+</span><img src="assets/${productById[p.secondary].image}" alt="${productById[p.secondary].name}"></span><strong class="tier-pair">${p.name}</strong><span class="tier-benefit">${benefit}</span><span class="tier-price">${money(cost/100)}<small>equipamiento</small></span><span class="tier-cap">${p.cap===null?'Instalación y servicios a cotizar':'Objetivo total: '+money(p.cap)}</span><span class="tier-margin ${gap!==null&&gap<0?'tier-over':''}">${gap===null?(consoleUsb?'Con audio USB de la consola':'Incluye interfaz de audio'):gap<0?money(-gap/100)+' sobre el objetivo, antes de gastos':money(gap/100)+' restantes para gastos'}</span><span class="tier-action">${mode===key?'Opción seleccionada ✓':'Ver esta opción →'}</span></button>`;
+ }).join('');
  document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{mode=button.dataset.mode;fields.forEach(id=>document.getElementById(id).value=entered[mode][id]);renderSelection();document.getElementById('tier-'+mode).focus();}));
 }
 function renderSelection(){
  const selected=plans[mode],lines=planLines(mode);renderPicker();
  document.getElementById('interface-option').hidden=mode!=='optimal';
- document.getElementById('mode-note').innerHTML=`<strong>${selected.title} · ${selected.name}</strong><br>${selected.note}${mode==='optimal'&&consoleUsb?'<br><strong>Interfaz retirada:</strong> se utiliza el USB estéreo de la consola ya validado.':''}`;
- document.getElementById('products').innerHTML=lines.map(p=>`<article class="product"><a class="product-photo" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="Ver ${p.name} en Mercado Libre"><img src="assets/${p.image}" alt="${p.name}, foto de la publicación" loading="lazy" width="400" height="300"></a><div class="product-body"><p class="product-role">${p.id===selected.main?'01 / CÁMARA PRINCIPAL':p.id===selected.secondary?'02 / CÁMARA CERCANA':p.role}</p><h3>${p.name}</h3><p class="product-note">${p.note}</p><div class="product-price"><strong>${money(p.price)}</strong><span>por ${p.id==='canal'?'tira de 2 m':'unidad'}</span></div><div class="product-bottom"><strong>${p.qty} × ${money(p.price)} = ${money(p.cents*p.qty/100)}</strong>${external(p.url,'Ver en Mercado Libre')}</div><p class="product-source">${p.source}</p></div></article>`).join('');
+ const description=mode==='optimal'&&consoleUsb?'Brio como cámara principal y C920 para acercamientos, con canaletas para el cableado. Se utiliza el audio USB estéreo de la consola. Ambas cámaras tienen conexión de trípode de 1/4″.':selected.note;
+ document.getElementById('mode-note').innerHTML=`<h3>${selected.title} · ${selected.name}</h3><p>${description}</p>`;
+ document.getElementById('selection-condition').innerHTML=`<p>${selected.condition}</p>`;
+ document.getElementById('selection-lines').innerHTML=lines.map(p=>`<div><span>${p.qty} × ${p.name}</span><strong>${money(p.cents*p.qty/100)}</strong></div>`).join('');
+ document.getElementById('products').innerHTML=lines.map(p=>`<article class="product"><a class="product-photo" href="${p.url}" target="_blank" rel="noopener noreferrer" aria-label="Ver ${p.name} en Mercado Libre"><img src="assets/${p.image}" alt="${p.name}" loading="lazy" width="400" height="300"></a><div class="product-body"><p class="product-role">${p.id===selected.main?'CÁMARA PRINCIPAL':p.id===selected.secondary?'CÁMARA CERCANA':'INSTALACIÓN'}</p><h3>${p.name}</h3><p class="product-note">${p.note}</p><div class="product-price"><strong>${money(p.price)}</strong><span>por ${p.id==='canal'?'tira de 2 m':'unidad'} · ${p.seller}</span></div><div class="product-bottom"><span>${p.qty} ${p.qty===1?'unidad':'unidades'} · ${money(p.cents*p.qty/100)}</span>${external(p.url,'Ver en Mercado Libre')}</div><details class="product-spec"><summary>Características y compatibilidad</summary><p>${p.technical}</p></details></div></article>`).join('');
  window.keukenPlan={main:selected.main,secondary:selected.secondary,name:selected.name};window.dispatchEvent(new CustomEvent('keuken:plan',{detail:window.keukenPlan}));renderBudget();
 }
 function renderBudget(){
- const plan=plans[mode],lines=planLines(mode),hardware=subtotalOf(lines),cap=planCap(mode);
+ const plan=plans[mode],hardware=subtotalOf(planLines(mode));
  const inputs=fields.map(id=>document.getElementById(id));
- const extras=inputs.reduce((sum,el)=>sum+Math.round(Math.max(0,Math.min(10000000,Number(el.value)||0))*100),0);
- const pending=inputs.filter(el=>el.value===''||!el.validity.valid).length,total=hardware+extras,margin=cap-total;
- const limitName=mode==='optimal'?'Previsión orientativa':'Tope total';
- document.getElementById('budget-output').innerHTML=`<h3 class="selected-budget">${plan.name}<br><small>Dos cámaras incluidas</small></h3><p class="big-total">${money(hardware/100)}</p><p class="small">Productos publicados · ${plan.title.toLowerCase()}</p><div class="audit-lines">${lines.map(p=>`<div><span>${p.name}<small>${p.qty} × ${money(p.price)}</small></span><b>${money(p.cents*p.qty/100)}</b></div>`).join('')}</div><p class="budget-status ${margin<0?'over':''}">${margin<0?'Supera '+(mode==='optimal'?'la previsión':'el tope')+' por '+money(-margin/100):'Disponible para cerrar: '+money(margin/100)}</p><dl><div><dt>Productos</dt><dd>${money(hardware/100)}</dd></div><div><dt>Gastos ingresados</dt><dd>${extras?money(extras/100):(pending?'Pendientes':money(0))}</dd></div><div class="limit"><dt>Total ${pending?'parcial':'calculado'}</dt><dd>${money(total/100)}</dd></div><div><dt>${limitName}</dt><dd>${money(cap/100)}</dd></div></dl><p class="small">${margin<0?'Revisar el cierre antes de comprar: se supera '+(mode==='optimal'?'la previsión orientativa.':'el límite solicitado.') :pending?'Faltan '+pending+' rubros por cotizar. La reserva es un margen previsto, no una cotización.':'La suma entra con los importes ingresados. Esto no valida las roscas, el anclaje ni el encuadre; comprobarlos antes del pago.'}</p>`;
+ inputs.forEach(el=>el.setAttribute('aria-invalid',String(!el.validity.valid)));
+ const invalid=inputs.some(el=>!el.validity.valid);
+ const extras=inputs.reduce((sum,el)=>sum+(el.value!==''&&el.validity.valid?Math.round(Number(el.value)*100):0),0);
+ const enteredCount=inputs.filter(el=>el.value!==''&&el.validity.valid).length;
+ const total=hardware+extras,margin=plan.cap===null?null:plan.cap*100-total;
+ document.getElementById('budget-output').innerHTML=`<p class="big-total">${money((enteredCount?total:hardware)/100)}</p><p class="budget-caption">${enteredCount?'Equipamiento + gastos ingresados':'Dos cámaras + accesorios de esta opción'}</p>${enteredCount?`<dl><div><dt>Equipamiento</dt><dd>${money(hardware/100)}</dd></div><div><dt>Gastos ingresados</dt><dd>${money(extras/100)}</dd></div></dl>`:''}${margin!==null?`<p class="budget-status ${margin<0?'over':''}">${margin<0?'Sobre el objetivo: '+money(-margin/100):'Margen hasta '+money(plan.cap)+': '+money(margin/100)}</p>`:''}<p class="small">${invalid?'Revisá los importes: deben ser números entre 0 y 10.000.000.':enteredCount<3?'Total parcial. Los gastos sin importe siguen pendientes de cotización.':'Total calculado con los gastos ingresados. Sujeto a confirmación de precios y alcance.'}</p>`;
 }
 fields.forEach(id=>document.getElementById(id).addEventListener('input',()=>{entered[mode][id]=document.getElementById(id).value;renderBudget();}));
 document.getElementById('console-usb').addEventListener('change',event=>{consoleUsb=event.target.checked;renderSelection();});
 renderSelection();
+
+function revealAnchor(){
+ const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+ if(!target)return;
+ const parents=[];let node=target;
+ while(node){if(node.tagName==='DETAILS')parents.push(node);node=node.parentElement;}
+ if(parents.some(el=>!el.open)){parents.forEach(el=>el.open=true);requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}
+}
+window.addEventListener('hashchange',revealAnchor);
+document.addEventListener('click',event=>{const a=event.target.closest('a[href^="#"]');if(a&&a.hash===location.hash)revealAnchor();});
+window.addEventListener('load',revealAnchor);

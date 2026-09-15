@@ -7,12 +7,14 @@ Sitio independiente para presentar una instalación de dos cámaras en el centro
 
 ## Contenido
 
-- Portada inspirada en YouTube, con una fotografía real del salón. Reacciones, audiencia y chat ilustrativos.
-- Tres alternativas de equipamiento, fotografías de productos y enlaces a Mercado Libre Argentina.
-- Presupuesto interactivo que suma cantidades, audio opcional y gastos pendientes.
-- Plano del salón, comparación de encuadres y explicación del montaje.
-- Demostración de un panel sencillo para operadores. No se conecta a OBS ni transmite a YouTube.
-- Diseño adaptable a computadoras y celulares.
+La propuesta sigue un recorrido orientado al cliente: el recital online, el valor para Keuken, la distribución en el salón, la operación, la inversión y la puesta en marcha.
+
+- Portada inspirada en YouTube, con fotografía real del salón y reacciones ilustrativas.
+- Plano del lugar y demostración de un panel sencillo para operadores.
+- Tres alternativas con dos cámaras, cálculo de gastos y audio opcional.
+- Fotografías, precios y enlaces de compra agrupados en una lista desplegable.
+- Montaje, óptica y documentación técnica disponibles a pedido durante la lectura.
+- Diseño adaptable a computadoras y celulares. La demostración no se conecta a OBS ni transmite a YouTube.
 
 ## Datos y límites de la propuesta
 
@@ -20,8 +22,8 @@ Precios consultados el **14 de septiembre de 2026**, en pesos argentinos. No rep
 
 | Alternativa | Productos, antes de gastos pendientes |
 | --- | ---: |
-| Objetivo $200.000 | $200.062 — supera el objetivo en $62 |
-| Objetivo $300.000 | $296.162 |
+| Esencial · objetivo $200.000 | $200.062 — supera el objetivo en $62 |
+| Mejor imagen · objetivo $300.000 | $296.162 |
 | Óptimo con interfaz de audio | $791.438 |
 | Óptimo si la consola ya tiene USB estéreo verificado | $558.547 |
 
