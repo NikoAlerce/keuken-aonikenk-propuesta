@@ -6,40 +6,42 @@ Sitio independiente para presentar una instalación de dos cámaras en el centro
 - **Repositorio:** https://github.com/NikoAlerce/keuken-aonikenk-propuesta
 - **Soluciones:** https://nikoalerce.github.io/keuken-aonikenk-propuesta/soluciones/
 
-## Soluciones · 15 de septiembre de 2026
+## Soluciones · respuesta punto por punto · 15 de septiembre de 2026
 
-`soluciones/` desarrolla la respuesta a las necesidades de Keuken: distribución en YouTube y web, gestión de covers, apoyo económico, captación de amplificadores/acústicos/teatro, montaje reubicable, compras por necesidad y una sesión piloto. La página inicial enlaza esta ampliación y conserva sus presupuestos de referencia del 14/09.
+`soluciones/` responde la devolución de Keuken a la primera propuesta, tema por tema, con opciones, productos nacionales y una recomendación en cada caso. Abre con diez respuestas cortas (nueve preguntas del cliente en su orden y una propia sobre DJ sets en vivo), cada una con lo que falta confirmar y un enlace al detalle. El detalle tiene seis secciones: videos (solo YouTube, YouTube más la web de Keuken, reproductor propio; aportes y monetización plegados), covers y DJ sets (reclamo, falta y corte del vivo; bandas al aire por YouTube, DJ sets en vivo por Mixcloud Live y subida a YouTube al día siguiente, una línea fija para los artistas), sonido (amplificadores, premezcla, acústicos; teatro plegado), cámaras (puntos fijos en vigas o techo), la prueba (qué mandar, qué probar, qué se compra) y la lista de compra; después, la oferta de web a medida y un cierre breve.
 
-Los nueve productos de `soluciones/productos.json` fueron consultados directamente en Mercado Libre el 15/09. Sus imágenes se guardan en `assets/`. Las cantidades, subtotales y gastos se calculan en centavos enteros; un campo de gastos vacío significa **sin cotizar**, no envío gratuito. Elegir un escenario reemplaza la selección y borra la cotización de gastos anterior.
+Cada tema con equipamiento se resuelve eligiendo una opción; la opción «con lo que ya hay» cuesta cero y nada se suma solo. Los amplificadores y los puntos de montaje tienen cantidad. Subtotales, envío y otros insumos se calculan en centavos enteros; un campo vacío significa **sin cotizar**, no envío gratuito. Los once productos de `soluciones/productos.json` fueron consultados en Mercado Libre el 15/09 (nueve) y el 14/09 (base y rótula Genki, compartidos con la portada); sus imágenes están en `assets/`.
 
-| Ampliación | Productos de referencia, antes de gastos |
+| Opción recomendada | Productos de referencia, antes de envío |
 | --- | ---: |
 | Un amplificador: SL 75C + SMC10 + MISQ22 | $142.121 |
-| Acústico con consola: par C-2 + 2 SMC10 + 2 MISQ22 | $347.202 |
-| Grabadora H1essential, sin accesorios | $290.900 |
-| Dos soportes R094, para cámaras y apoyos compatibles | $85.778 |
+| Mezcla para internet: envío auxiliar a UMC202HD, si el USB de la consola no sirve | $232.000 |
+| Acústicos y sin consola: grabadora H1essential, sin accesorios | $290.900 |
+| Montaje: 4 puntos fijos (base Genki) + 2 rótulas | $71.952 |
+| Todas las recomendaciones juntas | $736.973 |
 
-Son módulos alternativos y condicionales, no un presupuesto completo nuevo de cámaras. Hay que descontar los equipos existentes y no duplicar los ya incluidos en otra propuesta. Envío a Lago Puelo, Andreani, puntos de sujeción, accesorios específicos, trabajo técnico, panel de OBS y derechos/licencias se confirman aparte. La web de Keuken tiene una oferta independiente a la gorra, detallada abajo.
+Son opciones condicionales: hay que descontar lo que Keuken ya tiene y lo que la prueba en el salón demuestre innecesario. Envío a Lago Puelo, Andreani, permiso para atornillar, retenciones, accesorios, trabajo técnico, panel de OBS y licencias se confirman aparte.
 
-### Verificación de esta ampliación
+### Fuentes verificadas el 15/09/2026
 
-- Comprobación real en navegador de precio, vendedor y stock de cada publicación. Se descartó una H1essential sin stock y una oferta internacional de C920; la cámara elegida mantiene el filtro nacional.
-- Sumatorias en navegador: $347.202 + $10.000,50 + $5.000 = $362.202,50; DI400P + SMC10 = $107.261,76. Gastos negativos invalidan el total. Cantidades de C-2: un par, dos cables y dos pies.
-- Interacción real con las pestañas de audio, navegación por teclado, selección de escenarios y resumen móvil. Imágenes locales verificadas como archivos válidos.
-- Diseño comprobado en navegador a 320, 390, 1440, 1920 y 2560 píxeles sin desborde horizontal. En pantallas grandes se mantiene un contenido de hasta 1500 píxeles. Accesos desde la portada comprobados en escritorio y celular; las nueve fotos responden HTTP 200.
-- Ninguna prueba en el salón ni validación física del montaje se presenta como realizada. El panel de operador sigue siendo una propuesta/demostración.
+Páginas oficiales de YouTube: reclamos de Content ID (6013276), faltas (2814000), derechos en transmisiones en vivo (3367684), ingresos compartidos en covers (3301938), requisitos del Programa de socios (72851 y 13429240, con Argentina en el acceso ampliado), impugnaciones (2797454), recorte de tramos reclamados (2902117), comprobaciones al subir (57407); informe de transparencia de YouTube (más del 90 % de los reclamos se monetizan). Mixcloud: blog sobre licencias, FAQ de Mixcloud Live y guía para OBS del centro de ayuda (servicio licenciado, sin retiros en vivos, audio archivado, video no archivado, plan Pro requerido; precio no verificado desde esta máquina). Tarifas de Cloudflare Stream. El arancel de NIC Argentina para `.com.ar` ($8.500 anuales) se tomó de un artículo actualizado el 18/06/2026 porque nic.ar no respondió; se presenta como referencia a confirmar.
+
+### Verificación de esta versión
+
+- Navegador del app, servidor local: sin errores de consola; sin desborde horizontal a 1440, 1009, 976, 375 y 320 píxeles; 10 respuestas sin anclas rotas, 14 tarjetas de opción y 11 productos.
+- Cálculos: recomendaciones = $736.973; seis puntos de montaje = $764.959; pinzas R094 en lugar de puntos = $750.799; dos amplificadores = $284.242 por ese tema; envío de $10.000,50 se suma con centavos. Importes negativos o mal formados invalidan el total.
+- Escritorio y celular revisados visualmente: portada, mapa de temas, covers, tarjetas de opción, lista de compra, tabla resumen y barra móvil de subtotal.
+- Ninguna prueba en el salón ni validación física del montaje se presenta como realizada. El panel de operador sigue siendo una demostración.
 
 ### Web a medida · oferta a la gorra
 
 La oferta en `soluciones/#web-a-medida` presenta el diseño y desarrollo de una primera web propia para Keuken con aporte voluntario, sin monto fijo ni mínimo. Propone identidad visual, agenda, videos de YouTube, archivo y enlaces de contacto/apoyo al centro. El alcance y la forma de actualización se acuerdan antes de comenzar; dominio, servicios pagos, ampliaciones y mantenimiento futuro se conversan aparte. Esta modalidad remunera el servicio del desarrollador y es independiente de los aportes del público al centro. El panel de control de OBS conserva su alcance y presupuesto separados.
 
-Verificación: sección revisada en navegador a 1280 y 390 píxeles, sin desborde horizontal; acceso desde la portada y navegación interna comprobados. El presupuesto de equipamiento mantiene sus cálculos y productos.
-
 Próximo paso para la web: acordar con Keuken las secciones y los contenidos de la primera versión.
 
 ### Próximo paso operativo
 
-Relevar modelos y existencias con Keuken, ensayar captación y dos encuadres en el salón, resolver repertorio/permisos de la sesión piloto y cotizar únicamente los faltantes comprobados. Las fuentes oficiales de YouTube, fabricantes y Cloudflare están enlazadas junto a las decisiones dentro de la página.
+Relevar modelos y existencias con Keuken, ensayar captación, encuadres y puntos de montaje en el salón, y cotizar únicamente los faltantes comprobados. Las fuentes oficiales de YouTube, fabricantes y Cloudflare están enlazadas junto a las decisiones dentro de la página.
 
 ## Contenido
 
