@@ -19,7 +19,7 @@ Los nueve productos de `soluciones/productos.json` fueron consultados directamen
 | Grabadora H1essential, sin accesorios | $290.900 |
 | Dos soportes R094, para cámaras y apoyos compatibles | $85.778 |
 
-Son módulos alternativos y condicionales, no un presupuesto completo nuevo de cámaras. Hay que descontar los equipos existentes y no duplicar los ya incluidos en otra propuesta. Envío a Lago Puelo, Andreani, puntos de sujeción, accesorios específicos, trabajo técnico, desarrollo y derechos/licencias se confirman aparte.
+Son módulos alternativos y condicionales, no un presupuesto completo nuevo de cámaras. Hay que descontar los equipos existentes y no duplicar los ya incluidos en otra propuesta. Envío a Lago Puelo, Andreani, puntos de sujeción, accesorios específicos, trabajo técnico, panel de OBS y derechos/licencias se confirman aparte. La web de Keuken tiene una oferta independiente a la gorra, detallada abajo.
 
 ### Verificación de esta ampliación
 
@@ -28,6 +28,14 @@ Son módulos alternativos y condicionales, no un presupuesto completo nuevo de c
 - Interacción real con las pestañas de audio, navegación por teclado, selección de escenarios y resumen móvil. Imágenes locales verificadas como archivos válidos.
 - Diseño comprobado en navegador a 320, 390, 1440, 1920 y 2560 píxeles sin desborde horizontal. En pantallas grandes se mantiene un contenido de hasta 1500 píxeles. Accesos desde la portada comprobados en escritorio y celular; las nueve fotos responden HTTP 200.
 - Ninguna prueba en el salón ni validación física del montaje se presenta como realizada. El panel de operador sigue siendo una propuesta/demostración.
+
+### Web a medida · oferta a la gorra
+
+La oferta en `soluciones/#web-a-medida` presenta el diseño y desarrollo de una primera web propia para Keuken con aporte voluntario, sin monto fijo ni mínimo. Propone identidad visual, agenda, videos de YouTube, archivo y enlaces de contacto/apoyo al centro. El alcance y la forma de actualización se acuerdan antes de comenzar; dominio, servicios pagos, ampliaciones y mantenimiento futuro se conversan aparte. Esta modalidad remunera el servicio del desarrollador y es independiente de los aportes del público al centro. El panel de control de OBS conserva su alcance y presupuesto separados.
+
+Verificación: sección revisada en navegador a 1280 y 390 píxeles, sin desborde horizontal; acceso desde la portada y navegación interna comprobados. El presupuesto de equipamiento mantiene sus cálculos y productos.
+
+Próximo paso para la web: acordar con Keuken las secciones y los contenidos de la primera versión.
 
 ### Próximo paso operativo
 
