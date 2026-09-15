@@ -2,6 +2,9 @@
 
 Sitio independiente para presentar una instalación de dos cámaras en el centro cultural Keuken Aonikenk, Lago Puelo, Chubut.
 
+- **Página:** https://nikoalerce.github.io/keuken-aonikenk-propuesta/
+- **Repositorio:** https://github.com/NikoAlerce/keuken-aonikenk-propuesta
+
 ## Contenido
 
 - Portada inspirada en YouTube, con una fotografía real del salón. Reacciones, audiencia y chat ilustrativos.
@@ -38,6 +41,6 @@ Abrir `http://127.0.0.1:4184/`. La fuente de esta versión publicable es este re
 
 ## GitHub Pages
 
-Configuración prevista: **Deploy from a branch → main → / (root)**. El archivo `.nojekyll` permite servir los archivos estáticos directamente. Cada cambio subido a `main` actualiza el sitio cuando termina la publicación de Pages.
+Configuración: **Deploy from a branch → main → / (root)**. El archivo `.nojekyll` permite servir los archivos estáticos directamente. Cada cambio subido a `main` actualiza el sitio cuando termina la publicación de Pages.
 
 Este repositorio contiene exclusivamente la propuesta de Keuken. Las fotografías del lugar, el logo y las imágenes de productos se incluyen para esta presentación; no se concede una licencia adicional sobre esos materiales.
